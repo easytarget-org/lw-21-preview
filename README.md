@@ -4,8 +4,10 @@ This is a home for an updated version of LaserWeb4, hopefully it is temporary si
 
 ## [Click here to run the latest version of the Demo in your Browser](https://easytarget-org.github.io/lw-mods-preview/preview/index.html)
 
+These changes live in the *Mill settings* branch of my [Fork](https://github.com/easytarget-org/LaserWeb4)
+
 This update/refresh contains many trivial/layout changes and a few minor functional changes designed to improve the user experience.
-Mostly UI related, there are *no major or breaking changes to the path generation and gcode rendering parts of the software*.
+These changes are mostly UI related, there are *no major or breaking changes to the path generation and gcode rendering parts of the software*.
 
 ## LaserWeb4 is a self-contained Webapp
 Which means:
