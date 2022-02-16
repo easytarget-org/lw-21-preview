@@ -7,8 +7,10 @@ This is a home for an updated version of LaserWeb4, hopefully it is temporary si
 These changes live in the *v4.1* branch of my [Fork](https://github.com/easytarget-org/LaserWeb4)
 - Note that the branch name changed recently
 
-This update/refresh contains many trivial/layout changes and a few minor functional changes designed to improve the user experience.
-These changes are mostly UI related, there are *no major or breaking changes to the path generation and gcode rendering parts of the software*.
+If you have questions or want to discuss this please [head over to the MakerForums](https://forum.makerforums.info/c/laserweb-cncweb/suggestions-feedback/80)
+
+This update/refresh contains many trivial/layout changes and a few minor functional changes designed to improve the user experience and support modern browser standards.
+These changes are mostly UI related, there are *no major or breaking changes to the path generation and gcode rendering parts of the software*, the build environment has also been updated
 
 ## LaserWeb4 is a self-contained Webapp
 Which means:
@@ -21,7 +23,7 @@ Run LaserWeb4 from this repository in your web browser by clicking in the [link]
 
 ## Changes compared to the current upstream LW4 release
 ### UI
-* Help tooltips for almost every setting, aimed at new users as well as old hands
+* Help tooltips added for almost every setting, aimed at new users as well as old hands
 * Better presentation and wider choice of preset machine settings, shows wiki/homepage links and logos for predefined firmwares
 * Progress indication (% done)
 * New gcode info panel showing loaded code status and simulation details when available
@@ -32,13 +34,13 @@ Run LaserWeb4 from this repository in your web browser by clicking in the [link]
 * Default filenames for saving gcode and workspaces can be set
   * [strftime()](https://github.com/samsonjs/strftime#supported-specifiers) substitution can be used in them to add date/time stamps.
   * Saved machine settings get the machine ID in the filename
-* Better feedback and confirmation for dangerous commands, some console logging is improved
-* Set the color for workspace and machine bed, pus axis label colors
+* Better feedback and confirmation for some UI operations, some console logging is improved
+* Set the color for workspace and machine bed, plus axis label colors
 * Webcam bugfixes; The stream now closes properly and stops when de-selected, copes better with different aspect ratios
 
 #### Operations
 * Vertical and reverse-diagonal rastering
-* New default settings for burn white and air assist
+* New default settings for burn white and air assist, default segmentation setting
 * 'Copy to all operations' is now available on many more fields
 * Document re-size tool has slightly larger input boxes (this was really annoying me..)
 
@@ -49,7 +51,7 @@ Run LaserWeb4 from this repository in your web browser by clicking in the [link]
 * Fluid on/off gcode can be defined
 
 ### Import
-* The DXF import module swapped for a more modern one that supports the latest DXF formats and is actively maintained against AutoDesk's continual changes to the 'standard'
+* The DXF import module has been changed for a more modern one that supports the latest DXF formats and is actively maintained against AutoDesk's continual changes to the 'standard'
   * Support for named layers and text has been lost
   * Support for splines and many modern DXF structures has been added
   * Paths are now grouped by layer color, layers without a color default to black
@@ -62,8 +64,8 @@ Run LaserWeb4 from this repository in your web browser by clicking in the [link]
 
 ### Deveoper stuff
 * Weback 5, React 16, Node 16
-* Numerous node package updates, and a prune of obsolete and unused ones
-* Production buids and devserver workin with webpack 5 defaults (quite nice to use)
+* Numerous node packages have had updates, and obsolete and unused ones pruned
+* Webpack config updated for v5, production buids and devserver working
   * There will be a new developer guide, checked into the reo so it can be kept fresh.
 
 ### And More
@@ -72,6 +74,6 @@ Run LaserWeb4 from this repository in your web browser by clicking in the [link]
 * I'm still working on this list :smile:
 
 ## Known issues
-* Modal dialogs (material database amd image vector/filter tool) cannot be closwd by clicking outside backgrund; use the 'X' button or 'ESC' key.
-* 'npm install' needs the '--force' flag when doing initial install
+* Modal dialogs (material database amd image vector/filter tool) cannot be closed by clicking the outsde backgrund; use the `[X]` button or `[ESC]` key.
+* `npm install` needs the `--force` flag when doing initial install
 * I'm still working on this list :frowning:
